@@ -130,25 +130,25 @@
     cursor.style.top = e.pageY + "px";
   }
 
-  if(mobile) {
-    saturns.addEventListener('click', (e) => {
-      e.preventDefault();
-      mSaturnsPreview.classList.add('on');
-    });
-    mSaturnsClose.addEventListener('click', (e) => {
-      e.preventDefault();
-      mSaturnsPreview.classList.remove('on');
-    });
-    blue.addEventListener('click', (e) => {
-      e.preventDefault();
-      mBluePreview.classList.add('on');
-    });
-    mBlueClose.addEventListener('click', (e) => {
-      e.preventDefault();
-      mBluePreview.classList.remove('on');
-    });
-  } 
   window.addEventListener('load', () => {
+    if(mobile) {
+      saturns.addEventListener('click', (e) => {
+        e.preventDefault();
+        mSaturnsPreview.classList.add('on');
+      });
+      mSaturnsClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        mSaturnsPreview.classList.remove('on');
+      });
+      blue.addEventListener('click', (e) => {
+        e.preventDefault();
+        mBluePreview.classList.add('on');
+      });
+      mBlueClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        mBluePreview.classList.remove('on');
+      });
+    } 
     mainScroll();
     preview(saturns, saturnsView, preViewWrap, close);
     preview(blue, blueView, preViewWrap, close);
